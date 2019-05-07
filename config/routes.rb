@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'session/new'
+  root :to => 'session#new'
   resources :reservations
   resources :flights
   resources :airplanes

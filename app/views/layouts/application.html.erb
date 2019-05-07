@@ -10,10 +10,9 @@
   </head>
 
   <body>
+  <%= link_to "Sign Up", login_path %>
   <% if @current_user.present? %>
   <%= link_to "Sign Out", login_path, :method => 'delete' %>
-   <% else %>
-   <h1>Nobody logged in </h1>
   <% end %>
     <%= yield %>
   </body>
