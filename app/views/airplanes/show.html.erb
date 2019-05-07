@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rows:</strong>
+  <%= @airplane.rows %>
+</p>
+
+<p>
+  <strong>Cols:</strong>
+  <%= @airplane.cols %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @airplane.name %>
+</p>
+
+<p>
+  <strong>Bonus:</strong>
+  <%= @airplane.bonus %>
+</p>
+
+<%= link_to 'Edit', edit_airplane_path(@airplane) %> |
+<%= link_to 'Back', airplanes_path %>
