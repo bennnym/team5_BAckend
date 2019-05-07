@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :airplanes
   resources :users, :only => [:new, :create]
 
+  get '/user' => 'users#show'
+
 
   get '/login' => 'session#new'
   post '/login' => 'session#create'
