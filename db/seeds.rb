@@ -6,7 +6,7 @@ f1 = Flight.create :date => '11/09/2001', :to => 'NYC', :from => 'LAX'
 f2 = Flight.create :date => '21/09/2001', :to => 'SYD', :from => 'LAX'
 
 User.destroy_all
-u1 = User.create :username => 'bennnym', :password_digest => 'chicken', :email => 'ben.k.muller@gmail.com'
+u1 = User.create :username => 'sam', :password_digest => 'chicken', :email => 'ben.k.muller@gmail.com', :admin => true
 
 Reservation.destroy_all
 r1 = Reservation.create
