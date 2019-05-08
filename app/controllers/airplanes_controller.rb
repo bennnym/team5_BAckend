@@ -27,7 +27,7 @@ class AirplanesController < ApplicationController
   # POST /airplanes.json
   def create
     @airplane = Airplane.new(airplane_params)
-
+    
     respond_to do |format|
       if @airplane.save
         format.html { redirect_to @airplane, notice: 'Airplane was successfully created.' }

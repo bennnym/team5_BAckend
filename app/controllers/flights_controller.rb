@@ -7,11 +7,15 @@ class FlightsController < ApplicationController
   # GET /flights.json
   def index
     @flights = Flight.all
+    @users = User.all
+
   end
 
   # GET /flights/1
   # GET /flights/1.json
   def show
+    @seats = @flight.reservations #shows all the seats available
+    @users = User.all
   end
 
   # GET /flights/new
@@ -31,6 +35,14 @@ class FlightsController < ApplicationController
     respond_to do |format|
       if @flight.save
         format.html { redirect_to @flight, notice: 'Flight was successfully created.' }
+        seats = Flight.last.airplane.rows.to_i * Flight.last.airplane.cols.to_i #this works out how many seats are going to be on this flight
+
+        (1..seats).map do |n|
+          reservation = Reservation.new 
+          reservation.flight_id = Flight.last.id
+          reservation.save
+      end
+
         format.json { render :show, status: :created, location: @flight }
       else
         format.html { render :new }
@@ -71,6 +83,6 @@ class FlightsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def flight_params
-      params.require(:flight).permit(:date, :to, :from)
+      params.require(:flight).permit(:date, :to, :from, :airplane_id)
     end
 end
