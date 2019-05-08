@@ -15,10 +15,12 @@
 
   <% if @current_user.present? %>
   <%= link_to "Sign Out", login_path, :method => 'delete', :class => "btn btn-white btn-animation" %>
-  <% end %>
+  <%= link_to "Flights", flights_path, :class => "btn btn-white btn-animation" %>
+  <%= link_to "Airplanes", airplanes_path, :class => "btn btn-white btn-animation" %>
   
+  <% else %>
   <%= link_to "Sign Up", login_path, :class => "btn btn-white btn-animation" %>
-
+<% end %>
     <%= yield %>
     </div>
   </div>
