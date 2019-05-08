@@ -1,3 +1,132 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+*::after,
+*::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+* {
+  font-family: 'Noto Sans', sans-serif;
+}
+html {
+height: 100%;
+width: 100%;
+
+}
+
+body{
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: #5fbdff;
+  background: linear-gradient(to bottom, #5fbdff 1%,#5fbdff 50%,#fa8d56 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fbdff', endColorstr='#fa8d56',GradientType=0 ); /* IE6-9 */
+  // background-image: linear-gradient(to right bottom,rgba(0, 0, 0, 0.804), rgba(153, 153, 153, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2-AZUaPA8BHU1x3SH2w3O0xHk5dAd7hGLPkFDoNASlJS3H9CG9A');
+  // background-size: cover;
+  // background-position: top;
+  // position: relative;
+  // background-attachment: fixed;
+  // background-repeat: no-repeat;
+
+
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  grid-auto-rows: auto auto auto;
+  justify-content: center;
+  padding: 5px;
+  color: black;
+}
+.grid-item {
+  padding: 1rem;
+  font-size: 1.2rem;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1rem 2rem;
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn:hover {
+  transform: translateY(-0.3rem);
+  box-shadow: 0 1rem 2rem rgba(255,255,255,.6);
+}
+
+.btn:active {
+  transform: translateY(-0.1rem);
+  box-shadow: 0 0.5rem 1rem rgba(255,255,255,.6);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height:100%;
+  width:100%;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn::after {
+  background-color: #000;
+}
+.btn-orange {
+  background-color: orange;
+  padding: 1rem 2rem;
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 10rem;
+  transition: all .2s;
+  position: relative;
+  border: orange;
+  cursor: pointer;
+
+}
+
+.bttn:hover {
+  transform: translateY(-.3rem);
+  box-shadow: 0 1rem 2rem rgba(227,161,59,.6);
+}
+
+.bttn:active {
+  transform: translateY(-.1rem);
+  box-shadow: 0 .3rem .8rem rgba(227,161,59,.6);
+}
+.email {
+  display: block;
+  text-align: center;
+  position:relative;
+  width: 30vw;
+  padding: .5rem;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10rem;
+  border: orange;
+}
+.email:hover {
+background-color: orange;
+color: #000;
+}

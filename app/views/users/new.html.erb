@@ -1,3 +1,5 @@
+<div class="grid-container">
+  <div class="grid-item">
 <h1>Sign Up!</h1>
 
 <% if @user.errors.any?  %>
@@ -10,10 +12,13 @@
 
 <%= form_for @user do |f| %>
 <%= f.label :username %>
-<%= f.text_field :username %>
+<%= f.text_field :username, :class=>"email" %>
 <%= f.label :password %>
-<%= f.password_field :password %>
-<%= f.label :password_confirmation %>
-<%= f.password_field :password_confirmation%>
-<%= f.submit "Sign Up" %>
+<%= f.password_field :password ,:class=>"email"  %>
+<%= f.label :password_confirmation%>
+<%= f.password_field :password_confirmation ,:class=>"email" %>
+<br><br>
+<%= f.submit "Sign Up" ,:class => "bttn btn-orange"%>
+</div>
 <% end %>
+</div>

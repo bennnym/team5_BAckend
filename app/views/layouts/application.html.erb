@@ -4,16 +4,20 @@
     <title>Team5Ba</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-  <%= link_to "Sign Up", login_path %>
+    <div class="grid-container">
+      <div class="grid-item">
+  <%= link_to "Sign Up", login_path, :class => "btn btn-white btn-animation" %>
   <% if @current_user.present? %>
-  <%= link_to "Sign Out", login_path, :method => 'delete' %>
+  <%= link_to "Sign Out", login_path, :method => 'delete', :class => "btn btn-white btn-animation" %>
   <% end %>
     <%= yield %>
+    </div>
+  </div>
   </body>
 </html>
