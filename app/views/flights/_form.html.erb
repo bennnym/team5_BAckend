@@ -17,14 +17,16 @@
   </div>
 
   <div class="field">
+    <%= form.label :from %>
+    <%= form.text_area :from %>
+  </div>
+
+  <div class="field">
     <%= form.label :to %>
     <%= form.text_area :to %>
   </div>
 
-  <div class="field">
-    <%= form.label :from %>
-    <%= form.text_area :from %>
-  </div>
+
 
   <div class="field">
   <%= form.select :airplane_id, Airplane.pluck(:name, :id), :include_blank => true  %>

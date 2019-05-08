@@ -1,5 +1,7 @@
 class ReservationsController < ApplicationController
   before_action :set_reservation, only: [:show, :edit, :update, :destroy]
+  before_action :check_for_login, only: [:new, :edit]
+  before_action :check_for_admin, :only => [:new, :edit]
 
   # GET /reservations
   # GET /reservations.json

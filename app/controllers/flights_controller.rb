@@ -7,11 +7,15 @@ class FlightsController < ApplicationController
   # GET /flights.json
   def index
     @flights = Flight.all
+    @users = User.all
+
   end
 
   # GET /flights/1
   # GET /flights/1.json
   def show
+    @seats = @flight.reservations #shows all the seats available
+    @users = User.all
   end
 
   # GET /flights/new
