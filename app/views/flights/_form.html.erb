@@ -26,7 +26,15 @@
     <%= form.text_area :from %>
   </div>
 
+  <div class="field">
+  <%= form.select :airplane_id, Airplane.pluck(:name, :id), :include_blank => true  %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>
+
+
+
+
 <% end %>
