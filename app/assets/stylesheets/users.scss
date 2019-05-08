@@ -24,11 +24,11 @@ body{
   background: linear-gradient(to bottom, #5fbdff 1%,#5fbdff 50%,#fa8d56 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5fbdff', endColorstr='#fa8d56',GradientType=0 ); /* IE6-9 */
   // background-image: linear-gradient(to right bottom,rgba(0, 0, 0, 0.804), rgba(153, 153, 153, 0.6)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2-AZUaPA8BHU1x3SH2w3O0xHk5dAd7hGLPkFDoNASlJS3H9CG9A');
-  // background-size: cover;
+   background-size: cover;
   // background-position: top;
   // position: relative;
-  // background-attachment: fixed;
-  // background-repeat: no-repeat;
+  background-attachment: fixed;
+  //background-repeat: no-repeat;
 
 
 }
