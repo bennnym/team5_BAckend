@@ -10,6 +10,7 @@ class SessionController < ApplicationController
    # then we assisgn the session key of user id to the actual user.id
   session[:user_id] = user.id
   session[:admin] = user.admin
+  session[:username] = user.username
       
   redirect_to flights_path
       
@@ -23,6 +24,7 @@ class SessionController < ApplicationController
   def destroy
     session[:user_id] = nil
     session[:admin] = nil
+    session[:username] = nil
     redirect_to login_path
   end
 end
