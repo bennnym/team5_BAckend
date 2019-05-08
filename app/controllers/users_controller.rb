@@ -28,6 +28,8 @@ class UsersController < ApplicationController
     @user = User.new user_params
     if @user.save #returns true or false this checks if passwords have been entered properly etc
       session[:user_id] = @user.id
+      session[:username] = @user.username
+      session[:admin] = @user.admin
       redirect_to new_user_path
     else
       render :new

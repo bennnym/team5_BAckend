@@ -7,7 +7,9 @@ class FlightsController < ApplicationController
   # GET /flights.json
   def index
     @flights = Flight.all
-    @users = User.all
+    @user = session[:user_id]
+    @username = session[:username]
+
 
   end
 
