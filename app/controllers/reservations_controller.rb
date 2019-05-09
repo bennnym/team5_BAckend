@@ -45,11 +45,9 @@ class ReservationsController < ApplicationController
   def update
     user = User.find_by :username => params[:username] # finds the user
     reservation = Reservation.find_by :id => params[:id]  # this finds the reservation to update
-    if reservation.user_id == "empty"
-      reservation.user_id = user.id
-      reservation.username = params[:username]
-      reservation.save
-    end
+    reservation.user_id = user.id
+    reservation.username = params[:username]
+    reservation.save
 
     
     respond_to do |format|
