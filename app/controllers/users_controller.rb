@@ -30,7 +30,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       session[:username] = @user.username
       session[:admin] = @user.admin
-      redirect_to "ttps://samseabourn.github.io/team5onfire-client/?#{ @user.username }", :overwrite_params => { :parm => 'foo' } ## change this to the actual link 
+      redirect_to "https://samseabourn.github.io/team5onfire-client/?#{ @user.username }", :overwrite_params => { :parm => 'foo' } ## change this to the actual link 
       # redirect_to new_user_path
     else
       render :new
