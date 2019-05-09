@@ -1,3 +1,5 @@
+
+<div class="grid-container">
 <%= form_with(model: airplane, local: true) do |form| %>
   <% if airplane.errors.any? %>
     <div id="error_explanation">
@@ -30,3 +32,4 @@
     <%= form.submit %>
   </div>
 <% end %>
+</div>
