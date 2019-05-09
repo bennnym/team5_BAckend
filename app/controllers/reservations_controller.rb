@@ -50,13 +50,13 @@ class ReservationsController < ApplicationController
 
     
     respond_to do |format|
-      if @reservation.update(reservation_params)
+      # if @reservation.update(reservation_params)
         format.html { redirect_to @reservation, notice: 'Reservation was successfully updated.' }
         format.json { render :show, status: :ok, location: @reservation }
-      else
-        format.html { render :edit }
-        format.json { render json: @reservation.errors, status: :unprocessable_entity }
-      end
+      # else
+      #   format.html { render :edit }
+      #   format.json { render json: @reservation.errors, status: :unprocessable_entity }
+      # end
     end
   end
 
@@ -82,6 +82,6 @@ class ReservationsController < ApplicationController
     end
 
       def secret_params
-      params.require(:id).permit(:username)
+      params.require(:id, :username).permit(:username, :id)
     end
 end
