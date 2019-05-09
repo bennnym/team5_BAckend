@@ -12,6 +12,7 @@ class ReservationsController < ApplicationController
   # GET /reservations/1
   # GET /reservations/1.json
   def show
+    @reservation = Reservation.find_by :id => params[:id]
   end
 
   # GET /reservations/new
@@ -42,6 +43,12 @@ class ReservationsController < ApplicationController
   # PATCH/PUT /reservations/1
   # PATCH/PUT /reservations/1.json
   def update
+    user = User.find_by :username => params[:username] # finds the user
+    reservation = Reservation.find_by :id => params[:id]  # this finds the reservation to update
+    reservation.user_id = user.id
+    reservation.save
+
+    
     respond_to do |format|
       if @reservation.update(reservation_params)
         format.html { redirect_to @reservation, notice: 'Reservation was successfully updated.' }
@@ -72,5 +79,9 @@ class ReservationsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def reservation_params
       params.fetch(:reservation, {})
+    end
+
+      def secret_params
+      params.require(:id).permit(:username)
     end
 end

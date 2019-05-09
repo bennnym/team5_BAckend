@@ -1,4 +1,19 @@
 <p id="notice"><%= notice %></p>
 
+<p class="booking-info">
+  <strong>User-ID:</strong>
+  <% if @user_id.present? %>
+  <%= @reservation.user_id %>
+  <% else %>
+   Empty Seat
+   <% end %>
+</p>
+
+<p class="booking-info">
+  <strong>Flight:</strong>
+  <%= @reservation.flight_id %>
+</p>
+
+
 <%= link_to 'Edit', edit_reservation_path(@reservation) %> |
 <%= link_to 'Back', reservations_path %>
