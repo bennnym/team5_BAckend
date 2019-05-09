@@ -11,7 +11,7 @@ class SessionController < ApplicationController
   session[:user_id] = user.id
   session[:admin] = user.admin
   session[:username] = user.username
-    redirect_to "ttps://samseabourn.github.io/team5onfire-client/?#{ user.username }", :overwrite_params => { :parm => 'foo' }
+    redirect_to "https://samseabourn.github.io/team5onfire-client/?#{ user.username }", :overwrite_params => { :parm => 'foo' }
 
   # redirect_to flights_path
       
