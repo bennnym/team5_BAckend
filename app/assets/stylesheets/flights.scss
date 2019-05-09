@@ -33,17 +33,15 @@
 .link:visited {
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   // display: inline-block;
   transition: all .2s;
   position: relative;
-  font-size: 2rem;
+  font-size: 1rem;
   border-style:double;
   color: black;
   border-radius: 10%;
-  width: 25rem;
-
-
+  // width: rem;
   text-align: center;
 }
 .link:hover {
@@ -51,6 +49,7 @@
   background-color: #000;
   color: #fff;
 }
+
 
 .booking-info {
    font-size: 1.3rem;
@@ -62,12 +61,29 @@
 
  }
  table {
- table-layout: fixed;
-  width: 50%;
- //   border-collapse: collapse;
- //   border: 3px solid purple;
+  border: 1px solid black;
+  border-radius: 2rem;
+  width: 70vw;
+  padding: 1rem;
+  background-color:rgba(255, 255, 255, 0.5);
  }
+
+ th, td {
+  border: 1px solid black;
+  border-radius: 0.7rem;
+
+  font-size: 1.4rem;
+  text-align: center;
+}
 
  #username {
    outline: none;
  }
+.table-link{
+  text-decoration:none;
+}
+.back-link {
+  // display: flex;
+  // width: 25%;
+  margin-left: 37%;
+}

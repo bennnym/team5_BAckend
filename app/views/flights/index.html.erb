@@ -20,16 +20,16 @@
         <td><%= flight.to %></td>
         <td><%= flight.from %></td>
         <td><%= flight.airplane.name %></td>
-        <td><%= link_to 'Show', flight %></td>
-        <td><%= link_to 'Edit', edit_flight_path(flight) %></td>
-        <td><%= link_to 'Destroy', flight, :method=>"delete", data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', flight, :class=>"table-link" %></td>
+        <td><%= link_to 'Edit', edit_flight_path(flight), :class=>"table-link" %></td>
+        <td><%= link_to 'Destroy', flight, :method=>"delete", data: { confirm: 'Are you sure?' }, :class=>"table-link" %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 </div>
+</div>
 
 <br>
 
-<%= link_to 'New Flight', new_flight_path %>
-</div>
+<%= link_to 'New Flight', new_flight_path, :class=>"link" %>
