@@ -30,8 +30,8 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       session[:username] = @user.username
       session[:admin] = @user.admin
-      # redirect_to 'http://localhost:3001', :overwrite_params => { :parm => 'foo' }
-      redirect_to new_user_path
+      redirect_to "http://localhost:3001/?#{ @user.username }", :overwrite_params => { :parm => 'foo' } ## change this to the actual link 
+      # redirect_to new_user_path
     else
       render :new
     end

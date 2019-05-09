@@ -1,7 +1,7 @@
 class FlightsController < ApplicationController
   before_action :set_flight, only: [:show, :edit, :update, :destroy]
   before_action :check_for_login, only: [:new, :edit]
-  before_action :check_for_admin, :only => [:new, :edit]
+  before_action :check_for_admin, only: [:new, :edit, :create ]
 
   # GET /flights
   # GET /flights.json
@@ -42,6 +42,7 @@ class FlightsController < ApplicationController
         (1..seats).map do |n|
           reservation = Reservation.new 
           reservation.flight_id = Flight.last.id
+          reservation.username = "empty"
           reservation.save
       end
 

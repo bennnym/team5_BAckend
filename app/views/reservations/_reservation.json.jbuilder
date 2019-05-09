@@ -1,1 +1,1 @@
-json.extract! reservation, :id, :flight_id, :user_id
+json.extract! reservation, :id, :flight_id, :user_id, :username
