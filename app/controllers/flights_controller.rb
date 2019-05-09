@@ -42,6 +42,7 @@ class FlightsController < ApplicationController
         (1..seats).map do |n|
           reservation = Reservation.new 
           reservation.flight_id = Flight.last.id
+          reservation.username = "empty"
           reservation.save
       end
 
