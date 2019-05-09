@@ -46,6 +46,7 @@ class ReservationsController < ApplicationController
     user = User.find_by :username => params[:username] # finds the user
     reservation = Reservation.find_by :id => params[:id]  # this finds the reservation to update
     reservation.user_id = user.id
+    reservation.username = params[:username]
     reservation.save
 
     
